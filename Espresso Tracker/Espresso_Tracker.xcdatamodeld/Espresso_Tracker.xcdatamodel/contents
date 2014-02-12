@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Beans" representedClassName="Beans" syncable="YES">
+        <attribute name="cultivar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roastDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="roaster" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shot" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shot" inverseName="beans" inverseEntity="Shot" syncable="YES"/>
+    </entity>
+    <entity name="Shot" representedClassName="Shot" syncable="YES">
+        <attribute name="datePulled" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="systemTag" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="beans" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beans" inverseName="shot" inverseEntity="Beans" syncable="YES"/>
+        <relationship name="completeRoutine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShotData" inverseName="completeRoutine" inverseEntity="ShotData" syncable="YES"/>
+        <relationship name="defaultRoutine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShotData" inverseName="defaultRoutine" inverseEntity="ShotData" syncable="YES"/>
+        <relationship name="shotHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShotData" inverseName="shotHistory" inverseEntity="ShotData" syncable="YES"/>
+        <relationship name="userRoutine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShotData" inverseName="userRoutine" inverseEntity="ShotData" syncable="YES"/>
+        <relationship name="variables" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Variable" inverseName="shots" inverseEntity="Variable" syncable="YES"/>
+    </entity>
+    <entity name="ShotData" representedClassName="ShotData" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="completeRoutine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shot" inverseName="completeRoutine" inverseEntity="Shot" syncable="YES"/>
+        <relationship name="defaultRoutine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shot" inverseName="defaultRoutine" inverseEntity="Shot" syncable="YES"/>
+        <relationship name="shotHistory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shot" inverseName="shotHistory" inverseEntity="Shot" syncable="YES"/>
+        <relationship name="userRoutine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shot" inverseName="userRoutine" inverseEntity="Shot" syncable="YES"/>
+    </entity>
+    <entity name="Variable" representedClassName="Variable" syncable="YES">
+        <attribute name="highestValue" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="increment" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="lowestValue" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownCellID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="slideOutControlCellID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shots" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shot" inverseName="variables" inverseEntity="Shot" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Beans" positionX="-99" positionY="-441" width="128" height="150"/>
+        <element name="Shot" positionX="-315" positionY="-352" width="128" height="178"/>
+        <element name="ShotData" positionX="-524" positionY="-307" width="128" height="118"/>
+        <element name="Variable" positionX="-99" positionY="-261" width="128" height="178"/>
+    </elements>
+</model>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Beans" representedClassName="Beans" syncable="YES">
+        <attribute name="cultivar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roastDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="roaster" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shot" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shot" inverseName="beans" inverseEntity="Shot" syncable="YES"/>
+    </entity>
+    <entity name="Shot" representedClassName="Shot" syncable="YES">
+        <attribute name="beanAgeInDays" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="datePulled" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="espressoVolumeInFluidOunces" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="espressoVolumeInML" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="espressoWeightInGrams" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="espressoWeightInOunces" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="grindSetting" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="groundsWeightInGrams" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="groundsWeightInOunces" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pullTimeInSeconds" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="beans" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Beans" inverseName="shot" inverseEntity="Beans" syncable="YES"/>
+        <relationship name="profile" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ShotProfile" inverseName="shot" inverseEntity="ShotProfile" syncable="YES"/>
+    </entity>
+    <entity name="ShotProfile" representedClassName="ShotProfile" syncable="YES">
+        <attribute name="acidic" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="aftertaste" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="bitter" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="body" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="bright" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="crema" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mouthfeel" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="overall" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="round" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="smooth" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="sweet" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="shot" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shot" inverseName="profile" inverseEntity="Shot" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Beans" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Shot" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ShotProfile" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

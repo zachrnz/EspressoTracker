@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA0E2B7D1853BC8100CBD51A /* ShotRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0E2B7C1853BC8100CBD51A /* ShotRoutine.m */; };
+		BA46D60B17F34F9F009620B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46D60A17F34F9F009620B5 /* Foundation.framework */; };
+		BA46D60D17F34F9F009620B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46D60C17F34F9F009620B5 /* CoreGraphics.framework */; };
+		BA46D60F17F34F9F009620B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46D60E17F34F9F009620B5 /* UIKit.framework */; };
+		BA46D61117F34F9F009620B5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46D61017F34F9F009620B5 /* CoreData.framework */; };
+		BA46D61717F34F9F009620B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA46D61517F34F9F009620B5 /* InfoPlist.strings */; };
+		BA46D61917F34F9F009620B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46D61817F34F9F009620B5 /* main.m */; };
+		BA46D61D17F34F9F009620B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46D61C17F34F9F009620B5 /* AppDelegate.m */; };
+		BA46D62017F34F9F009620B5 /* Espresso_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA46D61E17F34F9F009620B5 /* Espresso_Tracker.xcdatamodeld */; };
+		BA46D62217F34F9F009620B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA46D62117F34F9F009620B5 /* Images.xcassets */; };
+		BA46D62917F34F9F009620B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46D62817F34F9F009620B5 /* XCTest.framework */; };
+		BA46D62A17F34F9F009620B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46D60A17F34F9F009620B5 /* Foundation.framework */; };
+		BA46D62B17F34F9F009620B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46D60E17F34F9F009620B5 /* UIKit.framework */; };
+		BA46D62C17F34F9F009620B5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46D61017F34F9F009620B5 /* CoreData.framework */; };
+		BA46D63417F34F9F009620B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA46D63217F34F9F009620B5 /* InfoPlist.strings */; };
+		BA46D63617F34F9F009620B5 /* Espresso_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46D63517F34F9F009620B5 /* Espresso_TrackerTests.m */; };
+		BA46D64217F3509E009620B5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA46D64117F3509E009620B5 /* MainStoryboard.storyboard */; };
+		BA49A523183EDA8E00BC2E0B /* SliderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA49A522183EDA8E00BC2E0B /* SliderTableViewCell.m */; };
+		BA49A526183EE86300BC2E0B /* DecimalPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA49A525183EE86300BC2E0B /* DecimalPickerCell.m */; };
+		BA49A52F183EEDEE00BC2E0B /* DecimalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA49A52E183EEDEE00BC2E0B /* DecimalPickerView.m */; };
+		BA509E1418107F21003833FA /* NewShotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA509E1318107F21003833FA /* NewShotViewController.m */; };
+		BA9622EB181A8C6A00FCF04B /* Shot+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9622EA181A8C6A00FCF04B /* Shot+Custom.m */; };
+		BA9622F7181AD79700FCF04B /* Beans+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9622F6181AD79700FCF04B /* Beans+Custom.m */; };
+		BAC6AA85186003C600E73D31 /* Beans.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC6AA84186003C600E73D31 /* Beans.m */; };
+		BAC6AA88186003C700E73D31 /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC6AA87186003C700E73D31 /* Shot.m */; };
+		BAC6AA8E186003C700E73D31 /* ShotData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC6AA8D186003C700E73D31 /* ShotData.m */; };
+		BAC6AA91186006F400E73D31 /* Variable.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC6AA90186006F400E73D31 /* Variable.m */; };
+		BACE72421848157200413BC4 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE72411848157200413BC4 /* DataStore.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA46D62D17F34F9F009620B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA46D5FF17F34F9F009620B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA46D60617F34F9F009620B5;
+			remoteInfo = "Espresso Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA0E2B7B1853BC8100CBD51A /* ShotRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotRoutine.h; sourceTree = "<group>"; };
+		BA0E2B7C1853BC8100CBD51A /* ShotRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotRoutine.m; sourceTree = "<group>"; };
+		BA46D60717F34F9F009620B5 /* Espresso Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Espresso Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA46D60A17F34F9F009620B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA46D60C17F34F9F009620B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BA46D60E17F34F9F009620B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BA46D61017F34F9F009620B5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BA46D61417F34F9F009620B5 /* Espresso Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Espresso Tracker-Info.plist"; sourceTree = "<group>"; };
+		BA46D61617F34F9F009620B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA46D61817F34F9F009620B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA46D61A17F34F9F009620B5 /* Espresso Tracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Espresso Tracker-Prefix.pch"; sourceTree = "<group>"; };
+		BA46D61B17F34F9F009620B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA46D61C17F34F9F009620B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA46D61F17F34F9F009620B5 /* Espresso_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Espresso_Tracker.xcdatamodel; sourceTree = "<group>"; };
+		BA46D62117F34F9F009620B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA46D62717F34F9F009620B5 /* Espresso TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Espresso TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA46D62817F34F9F009620B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BA46D63117F34F9F009620B5 /* Espresso TrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Espresso TrackerTests-Info.plist"; sourceTree = "<group>"; };
+		BA46D63317F34F9F009620B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA46D63517F34F9F009620B5 /* Espresso_TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Espresso_TrackerTests.m; sourceTree = "<group>"; };
+		BA46D64117F3509E009620B5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BA49A521183EDA8E00BC2E0B /* SliderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderTableViewCell.h; sourceTree = "<group>"; };
+		BA49A522183EDA8E00BC2E0B /* SliderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderTableViewCell.m; sourceTree = "<group>"; };
+		BA49A524183EE86300BC2E0B /* DecimalPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalPickerCell.h; sourceTree = "<group>"; };
+		BA49A525183EE86300BC2E0B /* DecimalPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalPickerCell.m; sourceTree = "<group>"; };
+		BA49A52D183EEDEE00BC2E0B /* DecimalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalPickerView.h; sourceTree = "<group>"; };
+		BA49A52E183EEDEE00BC2E0B /* DecimalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalPickerView.m; sourceTree = "<group>"; };
+		BA509E1218107F21003833FA /* NewShotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewShotViewController.h; sourceTree = "<group>"; };
+		BA509E1318107F21003833FA /* NewShotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewShotViewController.m; sourceTree = "<group>"; };
+		BA9622E9181A8C6A00FCF04B /* Shot+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Shot+Custom.h"; sourceTree = "<group>"; };
+		BA9622EA181A8C6A00FCF04B /* Shot+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Shot+Custom.m"; sourceTree = "<group>"; };
+		BA9622F5181AD79700FCF04B /* Beans+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Beans+Custom.h"; sourceTree = "<group>"; };
+		BA9622F6181AD79700FCF04B /* Beans+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Beans+Custom.m"; sourceTree = "<group>"; };
+		BAC6AA83186003C600E73D31 /* Beans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beans.h; sourceTree = "<group>"; };
+		BAC6AA84186003C600E73D31 /* Beans.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beans.m; sourceTree = "<group>"; };
+		BAC6AA86186003C700E73D31 /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		BAC6AA87186003C700E73D31 /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
+		BAC6AA8C186003C700E73D31 /* ShotData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotData.h; sourceTree = "<group>"; };
+		BAC6AA8D186003C700E73D31 /* ShotData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotData.m; sourceTree = "<group>"; };
+		BAC6AA8F186006F400E73D31 /* Variable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variable.h; sourceTree = "<group>"; };
+		BAC6AA90186006F400E73D31 /* Variable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variable.m; sourceTree = "<group>"; };
+		BACE72401848157200413BC4 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
+		BACE72411848157200413BC4 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA46D60417F34F9F009620B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA46D60D17F34F9F009620B5 /* CoreGraphics.framework in Frameworks */,
+				BA46D61117F34F9F009620B5 /* CoreData.framework in Frameworks */,
+				BA46D60F17F34F9F009620B5 /* UIKit.framework in Frameworks */,
+				BA46D60B17F34F9F009620B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA46D62417F34F9F009620B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA46D62917F34F9F009620B5 /* XCTest.framework in Frameworks */,
+				BA46D62C17F34F9F009620B5 /* CoreData.framework in Frameworks */,
+				BA46D62B17F34F9F009620B5 /* UIKit.framework in Frameworks */,
+				BA46D62A17F34F9F009620B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA46D5FE17F34F9F009620B5 = {
+			isa = PBXGroup;
+			children = (
+				BA46D61217F34F9F009620B5 /* Espresso Tracker */,
+				BA46D62F17F34F9F009620B5 /* Espresso TrackerTests */,
+				BA46D60917F34F9F009620B5 /* Frameworks */,
+				BA46D60817F34F9F009620B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA46D60817F34F9F009620B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA46D60717F34F9F009620B5 /* Espresso Tracker.app */,
+				BA46D62717F34F9F009620B5 /* Espresso TrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA46D60917F34F9F009620B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA46D60A17F34F9F009620B5 /* Foundation.framework */,
+				BA46D60C17F34F9F009620B5 /* CoreGraphics.framework */,
+				BA46D60E17F34F9F009620B5 /* UIKit.framework */,
+				BA46D61017F34F9F009620B5 /* CoreData.framework */,
+				BA46D62817F34F9F009620B5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA46D61217F34F9F009620B5 /* Espresso Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				BA49A520183EDA5900BC2E0B /* View */,
+				BA4822E91837213F0030955F /* Controller */,
+				BA4822E8183721240030955F /* CoreData */,
+				BA46D61B17F34F9F009620B5 /* AppDelegate.h */,
+				BA46D61C17F34F9F009620B5 /* AppDelegate.m */,
+				BA46D62117F34F9F009620B5 /* Images.xcassets */,
+				BA46D61317F34F9F009620B5 /* Supporting Files */,
+			);
+			path = "Espresso Tracker";
+			sourceTree = "<group>";
+		};
+		BA46D61317F34F9F009620B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA46D64117F3509E009620B5 /* MainStoryboard.storyboard */,
+				BA46D61E17F34F9F009620B5 /* Espresso_Tracker.xcdatamodeld */,
+				BA46D61417F34F9F009620B5 /* Espresso Tracker-Info.plist */,
+				BA46D61517F34F9F009620B5 /* InfoPlist.strings */,
+				BA46D61817F34F9F009620B5 /* main.m */,
+				BA46D61A17F34F9F009620B5 /* Espresso Tracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA46D62F17F34F9F009620B5 /* Espresso TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA46D63517F34F9F009620B5 /* Espresso_TrackerTests.m */,
+				BA46D63017F34F9F009620B5 /* Supporting Files */,
+			);
+			path = "Espresso TrackerTests";
+			sourceTree = "<group>";
+		};
+		BA46D63017F34F9F009620B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA46D63117F34F9F009620B5 /* Espresso TrackerTests-Info.plist */,
+				BA46D63217F34F9F009620B5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA4822E8183721240030955F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BAC6AA8F186006F400E73D31 /* Variable.h */,
+				BAC6AA90186006F400E73D31 /* Variable.m */,
+				BAC6AA8C186003C700E73D31 /* ShotData.h */,
+				BAC6AA8D186003C700E73D31 /* ShotData.m */,
+				BAC6AA86186003C700E73D31 /* Shot.h */,
+				BAC6AA87186003C700E73D31 /* Shot.m */,
+				BAC6AA83186003C600E73D31 /* Beans.h */,
+				BAC6AA84186003C600E73D31 /* Beans.m */,
+				BACE72401848157200413BC4 /* DataStore.h */,
+				BACE72411848157200413BC4 /* DataStore.m */,
+				BA9622E9181A8C6A00FCF04B /* Shot+Custom.h */,
+				BA9622EA181A8C6A00FCF04B /* Shot+Custom.m */,
+				BA9622F5181AD79700FCF04B /* Beans+Custom.h */,
+				BA9622F6181AD79700FCF04B /* Beans+Custom.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		BA4822E91837213F0030955F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA0E2B7B1853BC8100CBD51A /* ShotRoutine.h */,
+				BA0E2B7C1853BC8100CBD51A /* ShotRoutine.m */,
+				BA509E1218107F21003833FA /* NewShotViewController.h */,
+				BA509E1318107F21003833FA /* NewShotViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BA49A520183EDA5900BC2E0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA49A52D183EEDEE00BC2E0B /* DecimalPickerView.h */,
+				BA49A52E183EEDEE00BC2E0B /* DecimalPickerView.m */,
+				BA49A524183EE86300BC2E0B /* DecimalPickerCell.h */,
+				BA49A525183EE86300BC2E0B /* DecimalPickerCell.m */,
+				BA49A521183EDA8E00BC2E0B /* SliderTableViewCell.h */,
+				BA49A522183EDA8E00BC2E0B /* SliderTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA46D60617F34F9F009620B5 /* Espresso Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA46D63917F34F9F009620B5 /* Build configuration list for PBXNativeTarget "Espresso Tracker" */;
+			buildPhases = (
+				BA46D60317F34F9F009620B5 /* Sources */,
+				BA46D60417F34F9F009620B5 /* Frameworks */,
+				BA46D60517F34F9F009620B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Espresso Tracker";
+			productName = "Espresso Tracker";
+			productReference = BA46D60717F34F9F009620B5 /* Espresso Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA46D62617F34F9F009620B5 /* Espresso TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA46D63C17F34F9F009620B5 /* Build configuration list for PBXNativeTarget "Espresso TrackerTests" */;
+			buildPhases = (
+				BA46D62317F34F9F009620B5 /* Sources */,
+				BA46D62417F34F9F009620B5 /* Frameworks */,
+				BA46D62517F34F9F009620B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA46D62E17F34F9F009620B5 /* PBXTargetDependency */,
+			);
+			name = "Espresso TrackerTests";
+			productName = "Espresso TrackerTests";
+			productReference = BA46D62717F34F9F009620B5 /* Espresso TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA46D5FF17F34F9F009620B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Zulu Alpha Design, Inc.";
+				TargetAttributes = {
+					BA46D62617F34F9F009620B5 = {
+						TestTargetID = BA46D60617F34F9F009620B5;
+					};
+				};
+			};
+			buildConfigurationList = BA46D60217F34F9F009620B5 /* Build configuration list for PBXProject "Espresso Tracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BA46D5FE17F34F9F009620B5;
+			productRefGroup = BA46D60817F34F9F009620B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA46D60617F34F9F009620B5 /* Espresso Tracker */,
+				BA46D62617F34F9F009620B5 /* Espresso TrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA46D60517F34F9F009620B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA46D64217F3509E009620B5 /* MainStoryboard.storyboard in Resources */,
+				BA46D61717F34F9F009620B5 /* InfoPlist.strings in Resources */,
+				BA46D62217F34F9F009620B5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA46D62517F34F9F009620B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA46D63417F34F9F009620B5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA46D60317F34F9F009620B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA49A523183EDA8E00BC2E0B /* SliderTableViewCell.m in Sources */,
+				BA46D61D17F34F9F009620B5 /* AppDelegate.m in Sources */,
+				BA509E1418107F21003833FA /* NewShotViewController.m in Sources */,
+				BACE72421848157200413BC4 /* DataStore.m in Sources */,
+				BA46D62017F34F9F009620B5 /* Espresso_Tracker.xcdatamodeld in Sources */,
+				BA0E2B7D1853BC8100CBD51A /* ShotRoutine.m in Sources */,
+				BAC6AA85186003C600E73D31 /* Beans.m in Sources */,
+				BA49A526183EE86300BC2E0B /* DecimalPickerCell.m in Sources */,
+				BAC6AA8E186003C700E73D31 /* ShotData.m in Sources */,
+				BA9622F7181AD79700FCF04B /* Beans+Custom.m in Sources */,
+				BA46D61917F34F9F009620B5 /* main.m in Sources */,
+				BAC6AA88186003C700E73D31 /* Shot.m in Sources */,
+				BAC6AA91186006F400E73D31 /* Variable.m in Sources */,
+				BA49A52F183EEDEE00BC2E0B /* DecimalPickerView.m in Sources */,
+				BA9622EB181A8C6A00FCF04B /* Shot+Custom.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA46D62317F34F9F009620B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA46D63617F34F9F009620B5 /* Espresso_TrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA46D62E17F34F9F009620B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA46D60617F34F9F009620B5 /* Espresso Tracker */;
+			targetProxy = BA46D62D17F34F9F009620B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA46D61517F34F9F009620B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA46D61617F34F9F009620B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BA46D63217F34F9F009620B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA46D63317F34F9F009620B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA46D63717F34F9F009620B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BA46D63817F34F9F009620B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA46D63A17F34F9F009620B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Espresso Tracker/Espresso Tracker-Prefix.pch";
+				INFOPLIST_FILE = "Espresso Tracker/Espresso Tracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BA46D63B17F34F9F009620B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Espresso Tracker/Espresso Tracker-Prefix.pch";
+				INFOPLIST_FILE = "Espresso Tracker/Espresso Tracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BA46D63D17F34F9F009620B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Espresso Tracker.app/Espresso Tracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Espresso Tracker/Espresso Tracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Espresso TrackerTests/Espresso TrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BA46D63E17F34F9F009620B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Espresso Tracker.app/Espresso Tracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Espresso Tracker/Espresso Tracker-Prefix.pch";
+				INFOPLIST_FILE = "Espresso TrackerTests/Espresso TrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA46D60217F34F9F009620B5 /* Build configuration list for PBXProject "Espresso Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA46D63717F34F9F009620B5 /* Debug */,
+				BA46D63817F34F9F009620B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA46D63917F34F9F009620B5 /* Build configuration list for PBXNativeTarget "Espresso Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA46D63A17F34F9F009620B5 /* Debug */,
+				BA46D63B17F34F9F009620B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA46D63C17F34F9F009620B5 /* Build configuration list for PBXNativeTarget "Espresso TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA46D63D17F34F9F009620B5 /* Debug */,
+				BA46D63E17F34F9F009620B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA46D61E17F34F9F009620B5 /* Espresso_Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA46D61F17F34F9F009620B5 /* Espresso_Tracker.xcdatamodel */,
+			);
+			currentVersion = BA46D61F17F34F9F009620B5 /* Espresso_Tracker.xcdatamodel */;
+			path = Espresso_Tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BA46D5FF17F34F9F009620B5 /* Project object */;
+}
