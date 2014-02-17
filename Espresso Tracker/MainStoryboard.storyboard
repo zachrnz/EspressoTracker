@@ -133,7 +133,7 @@
                                     <outlet property="value" destination="bYx-4H-WeT" id="d2r-Eq-TQv"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="saveButton" rowHeight="98" id="bYQ-0b-H4F">
+                            <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="saveButton" rowHeight="98" id="bYQ-0b-H4F">
                                 <rect key="frame" x="0.0" y="464" width="320" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bYQ-0b-H4F" id="Ss2-2h-ztK">

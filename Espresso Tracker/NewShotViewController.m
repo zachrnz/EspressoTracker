@@ -17,10 +17,6 @@
 #import "Shot+Custom.h"
 #import "ShotData.h"
 
-
-//NEW BRANCH 1
-
-
 #define kSliderTag 1 //View tag identifing the slider view
 #define kDecimalPickerTag 2 //View tag identifing the decimal picker view
 
@@ -422,26 +418,26 @@ static NSInteger numberOfCellsBeforeVariables = 1; //The number of static rows (
 
 
 
-/*! Reveals the date picker inline for the given indexPath, called by "didSelectRowAtIndexPath".
+/*! Toggles the picker on and off inline for the given indexPath, called by "didSelectRowAtIndexPath".
  
  @param indexPath The indexPath to reveal the UIDatePicker.
  */
 
 
-- (void)displayDecimalPickerForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)toggleDecimalPickerForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // display the date picker inline with the table content
     [self.tableView beginUpdates];
     
-    BOOL before = NO;   // indicates if the date picker is below "indexPath", help us determine which row to reveal
+    BOOL existingPickerIsAbove = NO;   // indicates if any existing picker is below "indexPath", help us determine which row to reveal
     if ([self hasSlideOutSelector])
     {
-        before = self.slideOutIndexPath.row < indexPath.row;
+        existingPickerIsAbove = self.slideOutIndexPath.row < indexPath.row;
     }
     
     BOOL sameCellClicked = (self.slideOutIndexPath.row - 1 == indexPath.row);
     
-    // remove any date picker cell if it exists
+    //We always want to remove any existing picker cell, because there should be only one at a time.
     if ([self hasSlideOutSelector])
     {
         [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.slideOutIndexPath.row inSection:0]]
@@ -454,20 +450,25 @@ static NSInteger numberOfCellsBeforeVariables = 1; //The number of static rows (
     if (!sameCellClicked)
     {
         // Display the new one
-        NSInteger rowToReveal = (before ? indexPath.row - 1 : indexPath.row);
-        NSIndexPath *indexPathToReveal = [NSIndexPath indexPathForRow:rowToReveal inSection:0];
+        NSInteger ownerIndex = (existingPickerIsAbove ? indexPath.row - 1 : indexPath.row);
+        NSIndexPath *ownerIndexPath = [NSIndexPath indexPathForRow:ownerIndex inSection:0];
         
-        [self toggleDecimalPickerForSelectedIndexPath:indexPathToReveal];
-        self.slideOutIndexPath = [NSIndexPath indexPathForRow:indexPathToReveal.row + 1 inSection:0];
+        //[self toggleDecimalPickerForSelectedIndexPath:indexPathToReveal];
+        
+        NSArray *selectorPath = @[[NSIndexPath indexPathForRow:indexPath.row + 1 inSection:0]];
+        [self.tableView insertRowsAtIndexPaths:selectorPath
+                              withRowAnimation:UITableViewRowAnimationFade];
+        
+        self.slideOutIndexPath = [NSIndexPath indexPathForRow:ownerIndexPath.row + 1 inSection:0];
     }
     
-    // always deselect the row containing the start or end date
+    // always deselect the row that owns the selector
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     //ending updates causes cellForIndexPath to be called to populate the cell we just inserted.
     [self.tableView endUpdates];
     
-    // inform our date picker of the current date to match the current cell
+    // inform our picker of the current date to match the current cell
     [self updateDecimalPicker];
 }
 
@@ -481,7 +482,7 @@ static NSInteger numberOfCellsBeforeVariables = 1; //The number of static rows (
     //If this is the DecimalPicker Cell
     if ([var.slideOutControlCellID isEqualToString:kDecimalPickerID])
     {
-            [self displayDecimalPickerForRowAtIndexPath:indexPath];
+            [self toggleDecimalPickerForRowAtIndexPath:indexPath];
     }
     else
     {
