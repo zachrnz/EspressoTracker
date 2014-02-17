@@ -455,6 +455,24 @@ static NSInteger numberOfCellsBeforeVariables = 1; //The number of static rows (
         
         //[self toggleDecimalPickerForSelectedIndexPath:indexPathToReveal];
         
+        
+        /*********
+         
+         //If sameCellClicked, we have already closed the selector
+         if (!sameCellClicked)
+         {
+         // Display the new one
+         NSInteger rowToReveal = (before ? indexPath.row - 1 : indexPath.row);
+         NSIndexPath *indexPathToReveal = [NSIndexPath indexPathForRow:rowToReveal inSection:0];
+         
+         [self toggleDecimalPickerForSelectedIndexPath:indexPathToReveal];
+         self.slideOutIndexPath = [NSIndexPath indexPathForRow:indexPathToReveal.row + 1 inSection:0];
+         }
+
+         
+         */
+        
+        
         NSArray *selectorPath = @[[NSIndexPath indexPathForRow:indexPath.row + 1 inSection:0]];
         [self.tableView insertRowsAtIndexPaths:selectorPath
                               withRowAnimation:UITableViewRowAnimationFade];
