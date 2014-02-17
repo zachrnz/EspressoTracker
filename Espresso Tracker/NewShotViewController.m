@@ -18,7 +18,7 @@
 #import "ShotData.h"
 
 
-//NEW BRANCH
+//NEW BRANCH 1
 
 
 #define kSliderTag 1 //View tag identifing the slider view
