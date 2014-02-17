@@ -4,8 +4,7 @@
 //
 //  Created by Zachary Arendsee on 10/17/13.
 //  Copyright (c) 2013 Zulu Alpha Design, Inc. All rights reserved.
-//
-//NEXT TASK: WORK ON THE SLIDE OUT SELECTORS, MAKE THEM DISPLAY
+
 
 #import "NewShotViewController.h"
 #import "SliderTableViewCell.h"
