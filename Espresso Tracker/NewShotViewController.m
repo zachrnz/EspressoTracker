@@ -349,33 +349,6 @@ static NSInteger numberOfCellsBeforeVariables = 1; //The number of static rows (
 }
 
 
-/*! Adds or removes a DecimalPicker cell below the given indexPath.
- 
- @param indexPath The indexPath to reveal the DecimalPickerCell.
- */
-- (void)toggleDecimalPickerForSelectedIndexPath:(NSIndexPath *)indexPath
-{
-    [self.tableView beginUpdates];
-    
-    NSArray *indexPaths = @[[NSIndexPath indexPathForRow:indexPath.row + 1 inSection:0]];
-    
-    // check if 'indexPath' has an attached date picker below it
-    if ([self hasPickerForIndexPath:indexPath])
-    {
-        // found a picker below it, so remove it
-        [self.tableView deleteRowsAtIndexPaths:indexPaths
-                              withRowAnimation:UITableViewRowAnimationFade];
-    }
-    else
-    {
-        // didn't find a picker below it, so we should insert it
-        [self.tableView insertRowsAtIndexPaths:indexPaths
-                              withRowAnimation:UITableViewRowAnimationFade];
-    }
-    
-    [self.tableView endUpdates];
-}
-
 /*! Determines if the given indexPath has a cell below it with a UIPickerView.
  
  @param indexPath The indexPath to check if its cell has a UIPickerView below it.
@@ -418,7 +391,8 @@ static NSInteger numberOfCellsBeforeVariables = 1; //The number of static rows (
 
 
 
-/*! Toggles the picker on and off inline for the given indexPath, called by "didSelectRowAtIndexPath".
+/*! Toggles the picker on and off for the given indexPath and simultaneously removes any other pickers, so that there is only one picker at any given time. 
+ Called by "didSelectRowAtIndexPath".
  
  @param indexPath The indexPath to reveal the UIDatePicker.
  */
@@ -453,27 +427,7 @@ static NSInteger numberOfCellsBeforeVariables = 1; //The number of static rows (
         NSInteger ownerIndex = (existingPickerIsAbove ? indexPath.row - 1 : indexPath.row);
         NSIndexPath *ownerIndexPath = [NSIndexPath indexPathForRow:ownerIndex inSection:0];
         
-        //[self toggleDecimalPickerForSelectedIndexPath:indexPathToReveal];
-        
-        
-        /*********
-         
-         //If sameCellClicked, we have already closed the selector
-         if (!sameCellClicked)
-         {
-         // Display the new one
-         NSInteger rowToReveal = (before ? indexPath.row - 1 : indexPath.row);
-         NSIndexPath *indexPathToReveal = [NSIndexPath indexPathForRow:rowToReveal inSection:0];
-         
-         [self toggleDecimalPickerForSelectedIndexPath:indexPathToReveal];
-         self.slideOutIndexPath = [NSIndexPath indexPathForRow:indexPathToReveal.row + 1 inSection:0];
-         }
-
-         
-         */
-        
-        
-        NSArray *selectorPath = @[[NSIndexPath indexPathForRow:indexPath.row + 1 inSection:0]];
+        NSArray *selectorPath = @[[NSIndexPath indexPathForRow:ownerIndexPath.row + 1 inSection:0]];
         [self.tableView insertRowsAtIndexPaths:selectorPath
                               withRowAnimation:UITableViewRowAnimationFade];
         
